@@ -9,6 +9,14 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def students_page():
+    '''
+    Currently the method should use the GET method only
+    as the current task is to display a list of students parsed from
+    the studentcsv file. Therefore, the line of code for POST method
+    is commented.
+    :return:
+    '''
+    '''
     if request.method == "POST":
         new_student_id = request.form.get("student-id", "")
         new_student_name = request.form.get("name", "")
@@ -18,7 +26,7 @@ def students_page():
         students.append(new_student)
 
         return redirect(url_for("students_page"))
-
+    '''
     return render_template("index.html", students=students)
 
 
