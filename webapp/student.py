@@ -2,12 +2,11 @@ students = []
 
 
 class Student:
-
     school_name = "Springfield Elementary"
 
-    def __init__(self, name,lastname, student_id=332):
+    def __init__(self, name, lastname, student_id=332):
         self.name = name
-        self.lastname=lastname
+        self.lastname = lastname
         self.student_id = student_id
         students.append(self)
 
